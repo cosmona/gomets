@@ -62,3 +62,8 @@
 .face-container .gomet {
   position: absolute;
 }
+/* line 61, /opt/lampp/htdocs/gomets/less/style.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/opt\/lampp\/htdocs\/gomets\/less\/style\.less}line{font-family:\0000361}}
+.player.active {
+  background-color: #9a9a9a;
+}

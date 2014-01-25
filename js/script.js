@@ -52,6 +52,12 @@ function PlayerController ($scope) {
         $scope.current = p;
     }
 
+    $scope.isActive = function (p) {
+        if (p == $scope.current) {
+            return 'active';
+        }
+    }
+
 
     $scope.addGomet = function (e)
     {
