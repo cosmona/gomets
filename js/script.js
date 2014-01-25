@@ -56,12 +56,12 @@ function PlayerController ($scope) {
     $scope.addGomet = function (e)
     {
         $.ionSound({
-            sounds: ["punch", "green"],
+            sounds: ["red", "green"],
             path: "media/sound/",
             volume: "0.3"
         });
 
-        $.ionSound.play("punch");
+        $.ionSound.play($scope.gometType);
 
         var offset = $('.face-container').offset();
         var fix = 15;

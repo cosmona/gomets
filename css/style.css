@@ -1,30 +1,29 @@
-/* line 1, /home/jesus/Escritorio/gomets/less/style.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/jesus\/Escritorio\/gomets\/less\/style\.less}line{font-family:\000031}}
+/* line 1, /opt/lampp/htdocs/gomets/less/style.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/opt\/lampp\/htdocs\/gomets\/less\/style\.less}line{font-family:\000031}}
 * {
   margin: 0;
   padding: 0;
   outline: none;
   box-sizing: border-box;
 }
-/* line 9, /home/jesus/Escritorio/gomets/less/style.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/jesus\/Escritorio\/gomets\/less\/style\.less}line{font-family:\000039}}
+/* line 9, /opt/lampp/htdocs/gomets/less/style.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/opt\/lampp\/htdocs\/gomets\/less\/style\.less}line{font-family:\000039}}
 .wrapper {
   width: 960px;
   margin: 0 auto;
   text-align: center;
 }
-/* line 16, /home/jesus/Escritorio/gomets/less/style.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/jesus\/Escritorio\/gomets\/less\/style\.less}line{font-family:\0000316}}
+/* line 16, /opt/lampp/htdocs/gomets/less/style.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/opt\/lampp\/htdocs\/gomets\/less\/style\.less}line{font-family:\0000316}}
 .face-container {
   margin-top: 150px;
   position: relative;
   cursor: pointer;
   display: inline-block;
 }
-/* line 24, /home/jesus/Escritorio/gomets/less/style.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/jesus\/Escritorio\/gomets\/less\/style\.less}line{font-family:\0000324}}
+/* line 24, /opt/lampp/htdocs/gomets/less/style.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/opt\/lampp\/htdocs\/gomets\/less\/style\.less}line{font-family:\0000324}}
 .gomet {
-  position: absolute;
   top: 0;
   left: 0;
   width: 41px;
@@ -32,18 +31,18 @@
   border-radius: 1000px;
   background-color: #9a9a9a;
 }
-/* line 34, /home/jesus/Escritorio/gomets/less/style.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/jesus\/Escritorio\/gomets\/less\/style\.less}line{font-family:\0000334}}
+/* line 33, /opt/lampp/htdocs/gomets/less/style.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/opt\/lampp\/htdocs\/gomets\/less\/style\.less}line{font-family:\0000333}}
 .gomet.red {
   background-color: red;
 }
-/* line 37, /home/jesus/Escritorio/gomets/less/style.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/jesus\/Escritorio\/gomets\/less\/style\.less}line{font-family:\0000337}}
+/* line 36, /opt/lampp/htdocs/gomets/less/style.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/opt\/lampp\/htdocs\/gomets\/less\/style\.less}line{font-family:\0000336}}
 .gomet.green {
   background-color: green;
 }
-/* line 42, /home/jesus/Escritorio/gomets/less/style.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/jesus\/Escritorio\/gomets\/less\/style\.less}line{font-family:\0000342}}
+/* line 41, /opt/lampp/htdocs/gomets/less/style.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/opt\/lampp\/htdocs\/gomets\/less\/style\.less}line{font-family:\0000341}}
 .players {
   position: absolute;
   left: 0;
@@ -51,15 +50,15 @@
   background-color: gainsboro;
   height: 100%;
 }
-/* line 50, /home/jesus/Escritorio/gomets/less/style.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/jesus\/Escritorio\/gomets\/less\/style\.less}line{font-family:\0000350}}
+/* line 49, /opt/lampp/htdocs/gomets/less/style.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/opt\/lampp\/htdocs\/gomets\/less\/style\.less}line{font-family:\0000349}}
 .face-container {
   width: 396px;
   height: 384px;
   background-image: url('../img/cara.jpg');
 }
-/* line 55, /home/jesus/Escritorio/gomets/less/style.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/jesus\/Escritorio\/gomets\/less\/style\.less}line{font-family:\0000355}}
+/* line 54, /opt/lampp/htdocs/gomets/less/style.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/opt\/lampp\/htdocs\/gomets\/less\/style\.less}line{font-family:\0000354}}
 .face-container .gomet {
   position: absolute;
 }
