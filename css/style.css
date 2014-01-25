@@ -24,13 +24,13 @@
 /* line 24, /home/jesus/Escritorio/gomets/less/style.less */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/jesus\/Escritorio\/gomets\/less\/style\.less}line{font-family:\0000324}}
 .gomet {
-  position: absolute;
   border-radius: 1000px;
   width: 41px;
   height: 41px;
   background-color: #9a9a9a;
   top: 0;
   left: 0;
+  position: absolute;
 }
 /* line 35, /home/jesus/Escritorio/gomets/less/style.less */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/jesus\/Escritorio\/gomets\/less\/style\.less}line{font-family:\0000335}}
@@ -50,4 +50,16 @@
   width: 250px;
   background-color: gainsboro;
   height: 100%;
+}
+/* line 51, /home/jesus/Escritorio/gomets/less/style.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/jesus\/Escritorio\/gomets\/less\/style\.less}line{font-family:\0000351}}
+.face-container {
+  width: 396px;
+  height: 384px;
+  background-image: url('../img/cara.jpg');
+}
+/* line 56, /home/jesus/Escritorio/gomets/less/style.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/jesus\/Escritorio\/gomets\/less\/style\.less}line{font-family:\0000356}}
+.face-container .gomet {
+  position: absolute;
 }

@@ -23,13 +23,11 @@
             </div>
             {{current.name}}
             <div class="face-container" ng-click="addGomet($event)">
-                <div ng-repeat="gomet in current.gomets.red">
-                    <div class="gomet red" style="top:{{gomet.x}}px; left:{{gomet.y}}px"></div>
+                <div ng-repeat="gomet in current.gomets.red" class="gomet red" style="top:{{gomet.y}}px; left:{{gomet.x}}px">
+
                 </div>
-                <div ng-repeat="gomet in current.gomets.green">
-                    <div class="gomet green" style="top:{{gomet.x}}px; left:{{gomet.y}}px"></div>
+                <div ng-repeat="gomet in current.gomets.green" class="gomet green" style="top:{{gomet.y}}px; left:{{gomet.x}}px">
                 </div>
-                <img class="face" src="img/cara.jpg" />
             </div>
         </div>
     </body>

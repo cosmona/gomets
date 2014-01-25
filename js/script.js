@@ -29,15 +29,15 @@ function PlayerController ($scope) {
         {
             name: 'Ramon',
             gomets: {
-                red: [{x: 41, y: 143}],
-                green: [{x: 88, y: 50}, {x: 12, y: 400}]
+                red: [],
+                green: []
             }
         },
         {
             name: 'Jesus',
             gomets: {
-                red: [{x: 41, y: 143}],
-                green: [{x: 41, y: 143}]
+                red: [],
+                green: []
             }
         }
     ];
@@ -53,7 +53,6 @@ function PlayerController ($scope) {
 
     $scope.addGomet = function (e)
     {
-        alert('mierda');
         $.ionSound({
             sounds: ["punch", "green"],
             path: "media/sound/",
@@ -61,13 +60,12 @@ function PlayerController ($scope) {
         });
 
         $.ionSound.play("punch");
-        //$.ionSound.play("green");
-        return;
 
-        var offset = $(this).offset();
+        var offset = $('.face-container').offset();
         var fix = 15;
         var x = e.clientX - offset.left - fix;
         var y = e.clientY - offset.top - fix;
-        $(this).append('<div class="gomet" style="left:' + x + 'px;top:' + y + 'px;"></div>');
+
+        $scope.current.gomets.red.push({x: x, y: y});
     }
 }
