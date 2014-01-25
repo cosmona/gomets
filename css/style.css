@@ -24,26 +24,26 @@
 /* line 24, /home/jesus/Escritorio/gomets/less/style.less */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/jesus\/Escritorio\/gomets\/less\/style\.less}line{font-family:\0000324}}
 .gomet {
-  border-radius: 1000px;
-  width: 41px;
-  height: 41px;
-  background-color: #9a9a9a;
+  position: absolute;
   top: 0;
   left: 0;
-  position: absolute;
+  width: 41px;
+  height: 41px;
+  border-radius: 1000px;
+  background-color: #9a9a9a;
 }
-/* line 35, /home/jesus/Escritorio/gomets/less/style.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/jesus\/Escritorio\/gomets\/less\/style\.less}line{font-family:\0000335}}
+/* line 34, /home/jesus/Escritorio/gomets/less/style.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/jesus\/Escritorio\/gomets\/less\/style\.less}line{font-family:\0000334}}
 .gomet.red {
   background-color: red;
 }
-/* line 39, /home/jesus/Escritorio/gomets/less/style.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/jesus\/Escritorio\/gomets\/less\/style\.less}line{font-family:\0000339}}
+/* line 37, /home/jesus/Escritorio/gomets/less/style.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/jesus\/Escritorio\/gomets\/less\/style\.less}line{font-family:\0000337}}
 .gomet.green {
   background-color: green;
 }
-/* line 43, /home/jesus/Escritorio/gomets/less/style.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/jesus\/Escritorio\/gomets\/less\/style\.less}line{font-family:\0000343}}
+/* line 42, /home/jesus/Escritorio/gomets/less/style.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/jesus\/Escritorio\/gomets\/less\/style\.less}line{font-family:\0000342}}
 .players {
   position: absolute;
   left: 0;
@@ -51,15 +51,15 @@
   background-color: gainsboro;
   height: 100%;
 }
-/* line 51, /home/jesus/Escritorio/gomets/less/style.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/jesus\/Escritorio\/gomets\/less\/style\.less}line{font-family:\0000351}}
+/* line 50, /home/jesus/Escritorio/gomets/less/style.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/jesus\/Escritorio\/gomets\/less\/style\.less}line{font-family:\0000350}}
 .face-container {
   width: 396px;
   height: 384px;
   background-image: url('../img/cara.jpg');
 }
-/* line 56, /home/jesus/Escritorio/gomets/less/style.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/jesus\/Escritorio\/gomets\/less\/style\.less}line{font-family:\0000356}}
+/* line 55, /home/jesus/Escritorio/gomets/less/style.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/jesus\/Escritorio\/gomets\/less\/style\.less}line{font-family:\0000355}}
 .face-container .gomet {
   position: absolute;
 }

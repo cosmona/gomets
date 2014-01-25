@@ -4,12 +4,13 @@
         <title>GOMETS</title>
         <link rel="shortcut icon" href="img/gomet.png" type="image/png" />
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-        <script src="js/vendor/less.js"></script>
         <script src="js/vendor/ion.sound.min.js"></script>
         <script src="js/script.js"></script>
         <!--<link href="css/style.css" rel="stylesheet" type="text/css" />-->
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular.min.js"></script>
-        <link href="less/style.less" rel="stylesheet" type="text/less" />
+
+        <link href="less/style.less" rel="stylesheet/less" type="text/css" />
+        <script src="js/vendor/less.js"></script>
     </head>
     <body>
         <div class="wrapper" ng-controller="PlayerController">
@@ -21,6 +22,8 @@
 
                 </div>
             </div>
+            <div class="gomet red" ng-click="gometType = 'red'"></div>
+            <div class="gomet green" ng-click="gometType = 'green'"></div>
             {{current.name}}
             <div class="face-container" ng-click="addGomet($event)">
                 <div ng-repeat="gomet in current.gomets.red" class="gomet red" style="top:{{gomet.y}}px; left:{{gomet.x}}px">

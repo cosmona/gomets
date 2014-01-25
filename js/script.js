@@ -44,6 +44,8 @@ function PlayerController ($scope) {
 
     $scope.current = $scope.players[0];
 
+    $scope.gometType = 'red';
+
 
     $scope.selectPlayer = function (p) {
         console.log(p);
@@ -66,6 +68,6 @@ function PlayerController ($scope) {
         var x = e.clientX - offset.left - fix;
         var y = e.clientY - offset.top - fix;
 
-        $scope.current.gomets.red.push({x: x, y: y});
+        $scope.current.gomets[$scope.gometType].push({x: x, y: y});
     }
 }
