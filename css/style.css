@@ -1,0 +1,53 @@
+/* line 1, /home/jesus/Escritorio/gomets/less/style.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/jesus\/Escritorio\/gomets\/less\/style\.less}line{font-family:\000031}}
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+/* line 9, /home/jesus/Escritorio/gomets/less/style.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/jesus\/Escritorio\/gomets\/less\/style\.less}line{font-family:\000039}}
+.wrapper {
+  width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+/* line 16, /home/jesus/Escritorio/gomets/less/style.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/jesus\/Escritorio\/gomets\/less\/style\.less}line{font-family:\0000316}}
+.face-container {
+  margin-top: 150px;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+}
+/* line 24, /home/jesus/Escritorio/gomets/less/style.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/jesus\/Escritorio\/gomets\/less\/style\.less}line{font-family:\0000324}}
+.gomet {
+  position: absolute;
+  border-radius: 1000px;
+  width: 41px;
+  height: 41px;
+  background-color: #9a9a9a;
+  top: 0;
+  left: 0;
+}
+/* line 35, /home/jesus/Escritorio/gomets/less/style.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/jesus\/Escritorio\/gomets\/less\/style\.less}line{font-family:\0000335}}
+.gomet.red {
+  background-color: red;
+}
+/* line 39, /home/jesus/Escritorio/gomets/less/style.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/jesus\/Escritorio\/gomets\/less\/style\.less}line{font-family:\0000339}}
+.gomet.green {
+  background-color: green;
+}
+/* line 43, /home/jesus/Escritorio/gomets/less/style.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/jesus\/Escritorio\/gomets\/less\/style\.less}line{font-family:\0000343}}
+.players {
+  position: absolute;
+  left: 0;
+  width: 250px;
+  background-color: gainsboro;
+  height: 100%;
+}

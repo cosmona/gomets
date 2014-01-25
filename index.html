@@ -1,0 +1,33 @@
+<!doctype html>
+<html  ng-app>
+    <head>
+        <title>GOMETS</title>
+        <link rel="shortcut icon" href="img/gomet.png" type="image/png" />
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script src="js/vendor/less.js"></script>
+        <script src="js/vendor/ion.sound.min.js"></script>
+        <script src="js/script.js"></script>
+        <!--<link href="css/style.css" rel="stylesheet" type="text/css" />-->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular.min.js"></script>
+        <link href="less/style.less" rel="stylesheet" type="text/less" />
+    </head>
+    <body>
+        <div class="wrapper" ng-controller="PlayerController">
+            <div class="players">
+                <div ng-repeat="player in players">
+                    <span>{{player.name}}</span>
+                    <span>red:{{player.gomets.red.length}}</span>
+                    <span>green:{{player.gomets.green.length}}</span>
+
+                </div>
+            </div>
+            {{current.name}}
+            <div class="face-container" ng-click="addGomet()">
+                <div ng-repeat="gomet in current.gomets.red">
+                    <div class="gomet red" style="top:{{gomet.x}}px; left:{{gomet.y}}px"></div>
+                </div>
+                <img class="face" src="img/cara.jpg" />
+            </div>
+        </div>
+    </body>
+</html>
