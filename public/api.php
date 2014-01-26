@@ -7,22 +7,23 @@ if (!is_readable($document)) {
     file_put_contents($document, '');
 }
 
+if (isset($_GET['put'])) {
+    $data = json_decode(file_get_contents("php://input"));
 
-if (count($_POST) < 0) {
+    $players = json_decode(file_get_contents($document));
 
+    foreach ($players as $key => $player) {
+        if ($player->id == $data->player_id) {
+            $color = $data->color;
+            $list = $players[$key]->gomets->$color;
+            $list[] = $data->gomet;
+
+            $players[$key]->gomets->$color = $list;
+        }
+    }
+
+    unlink($document);
+    file_put_contents($document, json_encode($players));
 } else {
     echo file_get_contents($document);
 }
-
-die('');
-$newProductName = 'pepito';
-
-$player = new Xuscrus\Model\PlayerEntity();
-$player->setName($newProductName);
-
-$entityManager->persist($player);
-$entityManager->flush();
-
-echo "Created with ID " . $player->getId() . "\n";
-
-
