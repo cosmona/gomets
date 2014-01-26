@@ -8,18 +8,57 @@
 class PlayerTest extends PHPUnit_Framework_TestCase
 {
 
+    private $_player;
+
+    protected function setUp()
+    {
+        $this->_player = new Xuscrus\Model\Player();
+    }
+
     /**
      * @test
      */
-    function HaveName()
+    function haveName()
     {
         $name = 'luis';
 
-        $player = new Xuscrus\Model\Player();
+        $this->_player->setName($name);
 
-        $player->setName($name);
+        $this->assertEquals($name, $this->_player->getName());
+    }
 
-        $this->assertEquals($name, $player->getName());
+    function haveARedGometList()
+    {
+        $this->assertEquals(0, $this->_player->getRedGomets()->count());
+    }
+
+    /**
+     * @test
+     */
+    function canAddRedGomets()
+    {
+        $gomet = new Xuscrus\Model\GometEntity();
+
+        $this->_player->addRedGomet($gomet);
+
+        $this->assertEquals(1, $this->_player->getRedGomets()->count());
+    }
+
+    function haveAGreenGometList()
+    {
+        $this->assertEquals(0, $this->_player->getGreenGomets()->count());
+    }
+
+    /**
+     * @test
+     */
+    function canAddGreenGomets()
+    {
+        $gomet = new Xuscrus\Model\GometEntity();
+
+        $this->_player->addGreenGomet($gomet);
+
+        $this->assertEquals(1, $this->_player->getGreenGomets()->count());
     }
 
 }
