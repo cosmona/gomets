@@ -10,8 +10,14 @@ use \ArrayObject;
  * @author jesus
  * @Entity
  */
-class Player
+class PlayerEntity
 {
+
+    /**
+     * @Id @Column(type="integer") @GeneratedValue
+     * @var int
+     */
+    private $id;
 
     /** @Column(length=50) */
     private $_name;
@@ -78,6 +84,11 @@ class Player
     function addGreenGomet(GometEntity $gomet)
     {
         $this->_greenGomets->append($gomet);
+    }
+
+    function getId()
+    {
+        return $this->id;
     }
 
 }

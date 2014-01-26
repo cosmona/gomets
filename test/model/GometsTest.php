@@ -2,7 +2,8 @@
 
 /**
  * Description of GometsTest
- *
+ * @backupGlobals disabled
+ * @backupStaticAttributes disabled
  * @author jesus
  */
 class GometsTest extends PHPUnit_Framework_TestCase

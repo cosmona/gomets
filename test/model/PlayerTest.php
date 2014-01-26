@@ -2,7 +2,8 @@
 
 /**
  * Description of PlayerTest
- *
+ * @backupGlobals disabled
+ * @backupStaticAttributes disabled
  * @author jesus
  */
 class PlayerTest extends PHPUnit_Framework_TestCase
@@ -12,7 +13,7 @@ class PlayerTest extends PHPUnit_Framework_TestCase
 
     protected function setUp()
     {
-        $this->_player = new Xuscrus\Model\Player();
+        $this->_player = new Xuscrus\Model\PlayerEntity();
     }
 
     /**

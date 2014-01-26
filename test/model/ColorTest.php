@@ -2,7 +2,8 @@
 
 /**
  * Description of ColorTest
- *
+ * @backupGlobals disabled
+ * @backupStaticAttributes disabled
  * @author jesus
  */
 class ColorTest extends PHPUnit_Framework_TestCase
