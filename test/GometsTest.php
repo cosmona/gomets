@@ -8,16 +8,21 @@
 class GometsTest extends PHPUnit_Framework_TestCase
 {
 
+    private $_gomet;
+
+    protected function setUp()
+    {
+        parent::setUp();
+        $this->_gomet = new Xuscrus\Model\GometEntity();
+    }
+
     /**
      * @test
      */
     function gometHaveAnXYposition00perDefault()
     {
-
-        $gomet = new Xuscrus\Model\GometEntity();
-
-        $this->assertEquals(0, $gomet->getX());
-        $this->assertEquals(0, $gomet->getY());
+        $this->assertEquals(0, $this->_gomet->getX());
+        $this->assertEquals(0, $this->_gomet->getY());
     }
 
     /**
@@ -25,12 +30,10 @@ class GometsTest extends PHPUnit_Framework_TestCase
      */
     function gometCanSetPosition()
     {
-        $gomet = new Xuscrus\Model\GometEntity();
+        $this->_gomet->setPosition(10, 20);
 
-        $gomet->setPosition(10, 20);
-
-        $this->assertEquals(10, $gomet->getX());
-        $this->assertEquals(20, $gomet->getY());
+        $this->assertEquals(10, $this->_gomet->getX());
+        $this->assertEquals(20, $this->_gomet->getY());
     }
 
 }
