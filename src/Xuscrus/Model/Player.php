@@ -14,6 +14,17 @@ class Player
 
     private $_name;
 
+    /**
+     *
+     * @var ArrayObject
+     */
+    private $_redGomets;
+
+    public function __construct()
+    {
+        $this->_redGomets = new ArrayObject();
+    }
+
     function setName($name)
     {
         $this->_name = $name;
@@ -30,7 +41,16 @@ class Player
      */
     function getRedGomets()
     {
-        return new ArrayObject();
+        return $this->_redGomets;
+    }
+
+    /**
+     *
+     * @param \Xuscrus\Model\GometEntity $gomet
+     */
+    function addRedGomet(GometEntity $gomet)
+    {
+        $this->_redGomets->append($gomet);
     }
 
 }
