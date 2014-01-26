@@ -26,7 +26,7 @@ app.controller('PlayerController', function ($scope, apiService) {
     $scope.addGomet = function (event)
     {
         $.ionSound({
-            sounds: ["red", "gre    en"],
+            sounds: ["red", "green"],
             path: "media/sound/",
             volume: "0.3"
         });
