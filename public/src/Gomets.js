@@ -25,11 +25,6 @@ app.controller('PlayerController', function ($scope, apiService) {
 
     $scope.addGomet = function (event)
     {
-        $.ionSound({
-            sounds: ["red", "green"],
-            path: "media/sound/",
-            volume: "0.3"
-        });
 
         $.ionSound.play($scope.gometType);
 
@@ -37,9 +32,19 @@ app.controller('PlayerController', function ($scope, apiService) {
         var fix = 15;
         var x = event.clientX - offset.left - fix;
         var y = event.clientY - offset.top - fix;
-
-        $scope.current.gomets[$scope.gometType].push({x: x, y: y});
+        var gomet = {x: x, y: y};
+        $scope.current.gomets[$scope.gometType].push(gomet);
+        apiService.put($scope.current.id, gomet, $scope.gometType);
     };
+
+    loadSounds = function () {
+        $.ionSound({
+            sounds: ["red", "green"],
+            path: "media/sound/",
+            volume: "0.3"
+        });
+    };
+    loadSounds();
 });
 
 app.factory('apiService', function ($http) {
@@ -48,6 +53,19 @@ app.factory('apiService', function ($http) {
         get: function () {
             //return the promise directly.
             return $http.get('./api.php')
+                    .then(function (result) {
+                        //resolve the promise as the data
+                        return result.data;
+                    });
+        },
+        put: function (id, gomet, color) {
+            var data = {
+                player_id: id,
+                gomet: gomet,
+                color: color
+            };
+
+            return $http.post('./api.php?put', data)
                     .then(function (result) {
                         //resolve the promise as the data
                         return result.data;
