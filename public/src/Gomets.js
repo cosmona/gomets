@@ -1,24 +1,13 @@
-var Gomets = angular.module('Gomets', []);
+var app = angular.module('Gomets', []);
 
-Gomets.controller('PlayerController', function ($scope) {
-    $scope.players = [
-        {
-            name: 'RAMON',
-            gomets: {
-                red: [],
-                green: []
-            }
-        },
-        {
-            name: 'Jesus',
-            gomets: {
-                red: [],
-                green: []
-            }
-        }
-    ];
 
-    $scope.current = $scope.players[0];
+app.controller('PlayerController', function ($scope, apiService) {
+
+    $scope.players = apiService.get().then(function (data) {
+        $scope.players = data;
+        $scope.current = $scope.players[0];
+    });
+
 
     $scope.gometType = 'red';
 
@@ -37,7 +26,7 @@ Gomets.controller('PlayerController', function ($scope) {
     $scope.addGomet = function (event)
     {
         $.ionSound({
-            sounds: ["red", "green"],
+            sounds: ["red", "gre    en"],
             path: "media/sound/",
             volume: "0.3"
         });
@@ -50,5 +39,19 @@ Gomets.controller('PlayerController', function ($scope) {
         var y = event.clientY - offset.top - fix;
 
         $scope.current.gomets[$scope.gometType].push({x: x, y: y});
+    };
+});
+
+app.factory('apiService', function ($http) {
+
+    return{
+        get: function () {
+            //return the promise directly.
+            return $http.get('./api.php')
+                    .then(function (result) {
+                        //resolve the promise as the data
+                        return result.data;
+                    });
+        }
     };
 });
