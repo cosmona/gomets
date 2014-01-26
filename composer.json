@@ -14,5 +14,8 @@
     "require": {
         "cboden/ratchet": "dev-master",
         "gabordemooij/redbean": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {"Xuscrus\\": "src"}
     }
 }
