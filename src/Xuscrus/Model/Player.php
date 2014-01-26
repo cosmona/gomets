@@ -2,6 +2,8 @@
 
 namespace Xuscrus\Model;
 
+use \ArrayObject;
+
 /**
  * Description of Player
  *
@@ -20,6 +22,15 @@ class Player
     function getName()
     {
         return $this->_name;
+    }
+
+    /**
+     *
+     * @return \ArrayObject
+     */
+    function getRedGomets()
+    {
+        return new ArrayObject();
     }
 
 }
