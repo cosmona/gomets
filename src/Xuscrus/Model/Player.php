@@ -20,9 +20,16 @@ class Player
      */
     private $_redGomets;
 
+    /**
+     *
+     * @var ArrayObject
+     */
+    private $_greenGomets;
+
     public function __construct()
     {
         $this->_redGomets = new ArrayObject();
+        $this->_greenGomets = new ArrayObject();
     }
 
     function setName($name)
@@ -51,6 +58,24 @@ class Player
     function addRedGomet(GometEntity $gomet)
     {
         $this->_redGomets->append($gomet);
+    }
+
+    /**
+     *
+     * @return \ArrayObject
+     */
+    function getGreenGomets()
+    {
+        return $this->_greenGomets;
+    }
+
+    /**
+     *
+     * @param \Xuscrus\Model\GometEntity $gomet
+     */
+    function addGreenGomet(GometEntity $gomet)
+    {
+        $this->_greenGomets->append($gomet);
     }
 
 }
