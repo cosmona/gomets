@@ -8,10 +8,12 @@ use \ArrayObject;
  * Description of Player
  *
  * @author jesus
+ * @Entity
  */
 class Player
 {
 
+    /** @Column(length=50) */
     private $_name;
 
     /**

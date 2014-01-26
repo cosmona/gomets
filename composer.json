@@ -13,7 +13,7 @@
     ],
     "require": {
         "cboden/ratchet": "dev-master",
-        "gabordemooij/redbean": "dev-master"
+        "doctrine/orm": "*"
     },
     "autoload": {
         "psr-0": {"Xuscrus\\": "src"}
