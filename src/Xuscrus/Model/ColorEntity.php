@@ -9,5 +9,17 @@ namespace Xuscrus\Model;
  */
 class ColorEntity
 {
-    //put your code here
+
+    private $_type;
+
+    function setType($param)
+    {
+        $this->_type = $param;
+    }
+
+    function getType()
+    {
+        return $this->_type;
+    }
+
 }
