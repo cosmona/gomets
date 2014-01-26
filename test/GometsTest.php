@@ -19,7 +19,7 @@ class GometsTest extends PHPUnit_Framework_TestCase
     /**
      * @test
      */
-    function gometHaveAnXYposition00perDefault()
+    function HaveAnXYposition00perDefault()
     {
         $this->assertEquals(0, $this->_gomet->getX());
         $this->assertEquals(0, $this->_gomet->getY());
@@ -28,12 +28,23 @@ class GometsTest extends PHPUnit_Framework_TestCase
     /**
      * @test
      */
-    function gometCanSetPosition()
+    function CanSetPosition()
     {
         $this->_gomet->setPosition(10, 20);
 
         $this->assertEquals(10, $this->_gomet->getX());
         $this->assertEquals(20, $this->_gomet->getY());
+    }
+
+    /**
+     * @test
+     */
+    function canHaveAColor()
+    {
+        $colour = new Xuscrus\Model\ColorEntity();
+        $this->_gomet->setColor($colour);
+
+        $this->assertEquals($colour, $this->_gomet->getColor());
     }
 
 }

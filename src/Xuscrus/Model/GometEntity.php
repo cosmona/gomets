@@ -12,6 +12,7 @@ class GometEntity
 
     private $_x = 0;
     private $_y = 0;
+    private $_color;
 
     function getX()
     {
@@ -27,6 +28,16 @@ class GometEntity
     {
         $this->_x = $x;
         $this->_y = $y;
+    }
+
+    function setColor(ColorEntity $color)
+    {
+        $this->_color = $color;
+    }
+
+    function getColor()
+    {
+        return $this->_color;
     }
 
 }
