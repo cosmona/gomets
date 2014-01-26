@@ -1,7 +1,9 @@
-function PlayerController ($scope) {
+var Gomets = angular.module('Gomets', []);
+
+Gomets.controller('PlayerController', function ($scope) {
     $scope.players = [
         {
-            name: 'Ramon',
+            name: 'RAMON',
             gomets: {
                 red: [],
                 green: []
@@ -49,4 +51,4 @@ function PlayerController ($scope) {
 
         $scope.current.gomets[$scope.gometType].push({x: x, y: y});
     };
-}
+});
