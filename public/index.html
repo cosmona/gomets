@@ -8,6 +8,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular.min.js"></script>
         <script src="src/Gomets.js"></script>
 
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="less/style.less" rel="stylesheet/less" type="text/css" />
         <script src="lib/less.js"></script>
         <link href="css/style.css" rel="stylesheet" type="text/css" />
@@ -16,8 +17,9 @@
         <div class="wrapper" ng-controller="PlayerController">
             <div class="players">
 
-                <div class="gomet red" ng-click="gometType = 'red'"></div>
-                <div class="gomet green" ng-click="gometType = 'green'"></div>
+                <div class="gomet red" ng-click="gometType = 'red'">{{you.gomets.red.length}}</div>
+                <div class="gomet green" ng-click="gometType = 'green'">{{you.gomets.green.length}}</div>
+                <input ng-model="you.name" ng-change="changeName()" />
                 <hr>
                 <div ng-repeat="player in players" ng-click="selectPlayer(player)" class="player {{isActive(player)}}">
                     <span>{{player.name}}</span>

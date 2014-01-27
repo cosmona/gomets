@@ -13,7 +13,7 @@ if (!defined('PHPUNIT_TESTSUITE')) {
 $conf = json_decode($confjson);
 
 $database = APP_FOLDER . '/db/' . $conf->database;
-
+/*
 use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;
 
@@ -27,3 +27,4 @@ $conn = array(
 
 // obtaining the entity manager
 $entityManager = EntityManager::create($conn, $config);
+*/

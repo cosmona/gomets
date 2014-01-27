@@ -12,10 +12,11 @@
         }
     ],
     "require": {
-        "cboden/ratchet": "dev-master",
-        "doctrine/orm": "*"
     },
     "autoload": {
         "psr-0": {"Xuscrus\\": "src"}
+    },
+    "require-dev": {
+        "silex/silex": "dev-master"
     }
 }

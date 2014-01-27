@@ -6,8 +6,13 @@ app.controller('PlayerController', function ($scope, apiService) {
     $scope.players = [];
 
     $scope.players = apiService.get().then(function (data) {
-        $scope.players = data;
-        $scope.current = $scope.players[0];
+        $scope.players = data.players;
+        for (var key in $scope.players) {
+            $scope.current = $scope.players[key];
+            break;
+        }
+
+        $scope.you = data.you;
     });
 
 
@@ -39,6 +44,10 @@ app.controller('PlayerController', function ($scope, apiService) {
         apiService.put($scope.current.id, gomet, $scope.gometType);
     };
 
+    $scope.changeName = function () {
+        apiService.name($scope.you.name);
+    };
+
     loadSounds = function () {
         $.ionSound({
             sounds: ["red", "green"],
@@ -51,18 +60,21 @@ app.controller('PlayerController', function ($scope, apiService) {
 
     updateData = function () {
         apiService.get().then(function (data) {
-            var players = {};
-            for (var key in data) {
-                var player = data[key];
-                players['p' + player.id] = player;
+            for (var key in data.players) {
+                var player = data.players[key]
+
+
+                if (!$scope.players.hasOwnProperty(player.id)) {
+                    $scope.players[player.id] = player;
+                    continue;
+                }
+
+                $scope.players[player.id].name = player.name;
+                $scope.players[player.id].gomets = player.gomets;
             }
 
-            for (var key in $scope.players) {
-                var player = $scope.players[key]
-                var dataUpdated = players['p' + player.id];
-
-                $scope.players[key].gomets = dataUpdated.gomets;
-            }
+            $scope.you.name = data.you.name;
+            $scope.you.gomets = data.you.gomets;
         });
     };
 
@@ -76,7 +88,7 @@ app.factory('apiService', function ($http) {
     return{
         get: function () {
             //return the promise directly.
-            return $http.get('./api.php')
+            return $http.get('./api.php/get')
                     .then(function (result) {
                         //resolve the promise as the data
                         return result.data;
@@ -89,11 +101,22 @@ app.factory('apiService', function ($http) {
                 color: color
             };
 
-            return $http.post('./api.php?put', data)
+            return $http.post('./api.php/gomet', data)
                     .then(function (result) {
                         //resolve the promise as the data
                         return result.data;
                     });
-        }
+        },
+        name: function (name) {
+            var data = {
+                name: name
+            };
+
+            return $http.post('./api.php/change_name', data)
+                    .then(function (result) {
+                        //resolve the promise as the data
+                        return result.data;
+                    });
+        },
     };
 });
