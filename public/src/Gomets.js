@@ -1,20 +1,13 @@
 var app = angular.module('Gomets', []);
 
 
-app.controller('PlayerController', function ($scope, apiService) {
+app.controller('PlayerController', function ($scope, apiService, $location) {
 
     var put = false;
-    $scope.players = [];
-
-    $scope.players = apiService.get().then(function (data) {
-        $scope.players = data.players;
-        for (var key in $scope.players) {
-            $scope.current = $scope.players[key];
-            break;
-        }
-
-        $scope.you = data.you;
-    });
+    $scope.players = {};
+    $scope.you = {};
+    var log_id = false;
+    loggin();
 
 
     $scope.gometType = 'red';
@@ -34,7 +27,7 @@ app.controller('PlayerController', function ($scope, apiService) {
         if ($scope.gometType == color) {
             return 'active';
         }
-    }
+    };
 
 
     $scope.addGomet = function (event)
@@ -72,27 +65,54 @@ app.controller('PlayerController', function ($scope, apiService) {
             return;
         }
         apiService.get().then(function (data) {
-            for (var key in data.players) {
-                var player = data.players[key]
-
-
-                if (!$scope.players.hasOwnProperty(player.id)) {
-                    $scope.players[player.id] = player;
-                    continue;
-                }
-
-                $scope.players[player.id].name = player.name;
-                $scope.players[player.id].gomets = player.gomets;
-            }
-
-            $scope.you.name = data.you.name;
-            $scope.you.gomets = data.you.gomets;
+            updateScope(data);
         });
     };
 
-    setInterval(function () {
-        updateData();
-    }, 1000);
+    updateScope = function (data) {
+        for (var key in data.players) {
+            var player = data.players[key]
+
+
+            if (!$scope.players.hasOwnProperty(player.id)) {
+                $scope.players[player.id] = player;
+                continue;
+            }
+
+            $scope.players[player.id].name = player.name;
+            $scope.players[player.id].gomets = player.gomets;
+        }
+
+        $scope.you.name = data.you.name;
+        $scope.you.gomets = data.you.gomets;
+    };
+
+
+
+    function loggin () {
+        var id = $location.$$path;
+        id = id.replace('/', '');
+
+        apiService.login(id).then(function (data) {
+            if (id != data.id) {
+                window.location += '#/' + data.id;
+            }
+            log_id = data.id;
+
+            apiService.get().then(function (data) {
+                updateScope(data);
+                for (var key in data.players) {
+                    break;
+                }
+                $scope.current = data.players[key];
+            });
+
+            setInterval(function () {
+                updateData();
+            }, 1000);
+        });
+
+    }
 });
 
 app.factory('apiService', function ($http) {
@@ -100,6 +120,7 @@ app.factory('apiService', function ($http) {
     return{
         get: function () {
             //return the promise directly.
+
             return $http.get('./api.php/get')
                     .then(function (result) {
                         //resolve the promise as the data
@@ -130,5 +151,16 @@ app.factory('apiService', function ($http) {
                         return result.data;
                     });
         },
+        login: function (id) {
+            var data = {
+                user_id: id
+            };
+
+            return $http.post('./api.php/login', data)
+                    .then(function (result) {
+                        //resolve the promise as the data
+                        return result.data;
+                    });
+        }
     };
 });

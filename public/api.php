@@ -6,22 +6,22 @@ include __DIR__ . '/../bootstrap.php';
 $app = new \Silex\Application();
 $app['debug'] = true;
 session_start();
-session_cache_expire(60 * 9);
+session_cache_expire(60 * 60 * 8);
 
 $app->get('/get', function() use($app) {
     $players = get_players();
 
-    $id = session_id();
+    $id = $_SESSION['id'];
 
-    if (!isset($players->$id)) {
-        if (!is_object($players)) {
-            $players = new stdClass();
-        }
+    /* if (!isset($players->$id)) {
+      if (!is_object($players)) {
+      $players = new stdClass();
+      }
 
-        $players->$id = cerate_player();
+      $players->$id = cerate_player();
 
-        update_players($players);
-    }
+      update_players($players);
+      } */
 
     $response = new stdClass();
     $response->players = $players;
@@ -62,6 +62,33 @@ $app->post('/gomet', function() use($app) {
     die();
 });
 
+
+$app->post('/login', function () {
+
+    $data = json_decode(file_get_contents("php://input"));
+    $players = get_players();
+
+    $id = $data->user_id;
+
+    if (empty($id)) {
+        $id = session_id();
+    }
+
+    $_SESSION['id'] = $id;
+
+    if (!isset($players->$id)) {
+        if (!is_object($players)) {
+            $players = new stdClass();
+        }
+
+        $players->$id = cerate_player();
+
+        update_players($players);
+    }
+
+    echo json_encode($_SESSION);
+    die();
+});
 
 define('DATABASE', APP_FOLDER . '/db/players.json');
 
