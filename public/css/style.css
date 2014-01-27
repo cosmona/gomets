@@ -30,40 +30,67 @@
   height: 41px;
   border-radius: 1000px;
   background-color: #9a9a9a;
+  font-weight: bolder;
+  color: white;
 }
-/* line 33, /opt/lampp/htdocs/gomets/public/less/style.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/opt\/lampp\/htdocs\/gomets\/public\/less\/style\.less}line{font-family:\0000333}}
+/* line 35, /opt/lampp/htdocs/gomets/public/less/style.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/opt\/lampp\/htdocs\/gomets\/public\/less\/style\.less}line{font-family:\0000335}}
 .gomet.red {
   background-color: red;
 }
-/* line 36, /opt/lampp/htdocs/gomets/public/less/style.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/opt\/lampp\/htdocs\/gomets\/public\/less\/style\.less}line{font-family:\0000336}}
+/* line 38, /opt/lampp/htdocs/gomets/public/less/style.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/opt\/lampp\/htdocs\/gomets\/public\/less\/style\.less}line{font-family:\0000338}}
 .gomet.green {
   background-color: green;
 }
-/* line 41, /opt/lampp/htdocs/gomets/public/less/style.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/opt\/lampp\/htdocs\/gomets\/public\/less\/style\.less}line{font-family:\0000341}}
-.players {
+/* line 43, /opt/lampp/htdocs/gomets/public/less/style.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/opt\/lampp\/htdocs\/gomets\/public\/less\/style\.less}line{font-family:\0000343}}
+.left-bar {
   position: absolute;
   left: 0;
   width: 250px;
   background-color: gainsboro;
   height: 100%;
 }
-/* line 49, /opt/lampp/htdocs/gomets/public/less/style.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/opt\/lampp\/htdocs\/gomets\/public\/less\/style\.less}line{font-family:\0000349}}
+/* line 50, /opt/lampp/htdocs/gomets/public/less/style.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/opt\/lampp\/htdocs\/gomets\/public\/less\/style\.less}line{font-family:\0000350}}
+.left-bar .gomet {
+  display: inline-block;
+  font-size: 133%;
+  line-height: 38px;
+}
+/* line 56, /opt/lampp/htdocs/gomets/public/less/style.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/opt\/lampp\/htdocs\/gomets\/public\/less\/style\.less}line{font-family:\0000356}}
+.left-bar .gomet.small {
+  width: 20px;
+  height: 20px;
+  font-size: 100%;
+  line-height: 20px;
+}
+/* line 64, /opt/lampp/htdocs/gomets/public/less/style.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/opt\/lampp\/htdocs\/gomets\/public\/less\/style\.less}line{font-family:\0000364}}
+.left-bar .player {
+  padding: 3px 0;
+}
+/* line 68, /opt/lampp/htdocs/gomets/public/less/style.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/opt\/lampp\/htdocs\/gomets\/public\/less\/style\.less}line{font-family:\0000368}}
+.left-bar .player:first-child {
+  margin-top: 15px;
+}
+/* line 73, /opt/lampp/htdocs/gomets/public/less/style.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/opt\/lampp\/htdocs\/gomets\/public\/less\/style\.less}line{font-family:\0000373}}
 .face-container {
   width: 396px;
   height: 384px;
   background-image: url('../img/cara.jpg');
 }
-/* line 54, /opt/lampp/htdocs/gomets/public/less/style.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/opt\/lampp\/htdocs\/gomets\/public\/less\/style\.less}line{font-family:\0000354}}
+/* line 78, /opt/lampp/htdocs/gomets/public/less/style.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/opt\/lampp\/htdocs\/gomets\/public\/less\/style\.less}line{font-family:\0000378}}
 .face-container .gomet {
   position: absolute;
 }
-/* line 61, /opt/lampp/htdocs/gomets/public/less/style.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/opt\/lampp\/htdocs\/gomets\/public\/less\/style\.less}line{font-family:\0000361}}
+/* line 85, /opt/lampp/htdocs/gomets/public/less/style.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/opt\/lampp\/htdocs\/gomets\/public\/less\/style\.less}line{font-family:\0000385}}
 .player.active {
   background-color: #9a9a9a;
 }

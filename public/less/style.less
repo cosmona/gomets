@@ -29,6 +29,8 @@
     height: 41px;
     border-radius: 1000px;
     background-color: #9a9a9a;
+    font-weight: bolder;
+    color:white;
 
     &.red{
         background-color: red;
@@ -38,12 +40,34 @@
     }
 }
 
-.players{
+.left-bar{
     position: absolute;
     left: 0;
     width: 250px;
     background-color: gainsboro;
     height: 100%;
+
+    .gomet{
+        display: inline-block;
+        font-size: 133%;
+        line-height: 38px;
+    }
+
+    .gomet.small{
+        width: 20px;
+        height: 20px;
+
+        font-size: 100%;
+        line-height: 20px;
+    }
+
+    .player{
+        padding: 3px 0;
+    }
+
+    .player:first-child{
+        margin-top: 15px;
+    }
 }
 
 .face-container{
