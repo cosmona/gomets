@@ -2,6 +2,8 @@
 
 include __DIR__ . '/../bootstrap.php';
 
+session_start();
+
 $document = APP_FOLDER . '/db/players.json';
 if (!is_readable($document)) {
     file_put_contents($document, '');

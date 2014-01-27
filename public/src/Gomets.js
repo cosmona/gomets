@@ -3,6 +3,8 @@ var app = angular.module('Gomets', []);
 
 app.controller('PlayerController', function ($scope, apiService) {
 
+    $scope.players = [];
+
     $scope.players = apiService.get().then(function (data) {
         $scope.players = data;
         $scope.current = $scope.players[0];
@@ -17,7 +19,7 @@ app.controller('PlayerController', function ($scope, apiService) {
     };
 
     $scope.isActive = function (player) {
-        if (player == $scope.current) {
+        if (player === $scope.current) {
             return 'active';
         }
     };
@@ -44,7 +46,29 @@ app.controller('PlayerController', function ($scope, apiService) {
             volume: "0.3"
         });
     };
+
     loadSounds();
+
+    updateData = function () {
+        apiService.get().then(function (data) {
+            var players = {};
+            for (var key in data) {
+                var player = data[key];
+                players['p' + player.id] = player;
+            }
+
+            for (var key in $scope.players) {
+                var player = $scope.players[key]
+                var dataUpdated = players['p' + player.id];
+
+                $scope.players[key].gomets = dataUpdated.gomets;
+            }
+        });
+    };
+
+    setInterval(function () {
+        updateData();
+    }, 1000);
 });
 
 app.factory('apiService', function ($http) {
