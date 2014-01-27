@@ -3,6 +3,7 @@ var app = angular.module('Gomets', []);
 
 app.controller('PlayerController', function ($scope, apiService) {
 
+    var put = false;
     $scope.players = [];
 
     $scope.players = apiService.get().then(function (data) {
@@ -29,6 +30,12 @@ app.controller('PlayerController', function ($scope, apiService) {
         }
     };
 
+    $scope.currentGomet = function (color) {
+        if ($scope.gometType == color) {
+            return 'active';
+        }
+    }
+
 
     $scope.addGomet = function (event)
     {
@@ -42,6 +49,7 @@ app.controller('PlayerController', function ($scope, apiService) {
         var gomet = {x: x, y: y};
         $scope.current.gomets[$scope.gometType].push(gomet);
         apiService.put($scope.current.id, gomet, $scope.gometType);
+        put = true;
     };
 
     $scope.changeName = function () {
@@ -59,6 +67,10 @@ app.controller('PlayerController', function ($scope, apiService) {
     loadSounds();
 
     updateData = function () {
+        if (put) {
+            put = false;
+            return;
+        }
         apiService.get().then(function (data) {
             for (var key in data.players) {
                 var player = data.players[key]

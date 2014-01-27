@@ -24,73 +24,86 @@
 /* line 24, /opt/lampp/htdocs/gomets/public/less/style.less */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/opt\/lampp\/htdocs\/gomets\/public\/less\/style\.less}line{font-family:\0000324}}
 .gomet {
+  display: inline-block;
   top: 0;
   left: 0;
   width: 41px;
   height: 41px;
-  border-radius: 1000px;
   background-color: #9a9a9a;
-  font-weight: bolder;
+  border-radius: 1000px;
   color: white;
-}
-/* line 35, /opt/lampp/htdocs/gomets/public/less/style.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/opt\/lampp\/htdocs\/gomets\/public\/less\/style\.less}line{font-family:\0000335}}
-.gomet.red {
-  background-color: red;
+  font-weight: bolder;
+  font-size: 133%;
+  line-height: 38px;
 }
 /* line 38, /opt/lampp/htdocs/gomets/public/less/style.less */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/opt\/lampp\/htdocs\/gomets\/public\/less\/style\.less}line{font-family:\0000338}}
+.gomet.red {
+  background-color: red;
+}
+/* line 40, /opt/lampp/htdocs/gomets/public/less/style.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/opt\/lampp\/htdocs\/gomets\/public\/less\/style\.less}line{font-family:\0000340}}
+.gomet.red.active {
+  background-color: tomato;
+}
+/* line 45, /opt/lampp/htdocs/gomets/public/less/style.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/opt\/lampp\/htdocs\/gomets\/public\/less\/style\.less}line{font-family:\0000345}}
 .gomet.green {
   background-color: green;
 }
-/* line 43, /opt/lampp/htdocs/gomets/public/less/style.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/opt\/lampp\/htdocs\/gomets\/public\/less\/style\.less}line{font-family:\0000343}}
+/* line 47, /opt/lampp/htdocs/gomets/public/less/style.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/opt\/lampp\/htdocs\/gomets\/public\/less\/style\.less}line{font-family:\0000347}}
+.gomet.green.active {
+  background-color: olive;
+}
+/* line 53, /opt/lampp/htdocs/gomets/public/less/style.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/opt\/lampp\/htdocs\/gomets\/public\/less\/style\.less}line{font-family:\0000353}}
+.gomet.small {
+  width: 20px;
+  height: 20px;
+  font-size: 100%;
+  line-height: 20px;
+}
+/* line 62, /opt/lampp/htdocs/gomets/public/less/style.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/opt\/lampp\/htdocs\/gomets\/public\/less\/style\.less}line{font-family:\0000362}}
 .left-bar {
   position: absolute;
   left: 0;
   width: 250px;
   background-color: gainsboro;
   height: 100%;
+  padding-top: 10px;
 }
-/* line 50, /opt/lampp/htdocs/gomets/public/less/style.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/opt\/lampp\/htdocs\/gomets\/public\/less\/style\.less}line{font-family:\0000350}}
-.left-bar .gomet {
-  display: inline-block;
-  font-size: 133%;
-  line-height: 38px;
+/* line 71, /opt/lampp/htdocs/gomets/public/less/style.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/opt\/lampp\/htdocs\/gomets\/public\/less\/style\.less}line{font-family:\0000371}}
+.left-bar .gomet:not(.small) {
+  cursor: pointer;
 }
-/* line 56, /opt/lampp/htdocs/gomets/public/less/style.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/opt\/lampp\/htdocs\/gomets\/public\/less\/style\.less}line{font-family:\0000356}}
-.left-bar .gomet.small {
-  width: 20px;
-  height: 20px;
-  font-size: 100%;
-  line-height: 20px;
-}
-/* line 64, /opt/lampp/htdocs/gomets/public/less/style.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/opt\/lampp\/htdocs\/gomets\/public\/less\/style\.less}line{font-family:\0000364}}
+/* line 76, /opt/lampp/htdocs/gomets/public/less/style.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/opt\/lampp\/htdocs\/gomets\/public\/less\/style\.less}line{font-family:\0000376}}
 .left-bar .player {
   padding: 3px 0;
 }
-/* line 68, /opt/lampp/htdocs/gomets/public/less/style.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/opt\/lampp\/htdocs\/gomets\/public\/less\/style\.less}line{font-family:\0000368}}
+/* line 79, /opt/lampp/htdocs/gomets/public/less/style.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/opt\/lampp\/htdocs\/gomets\/public\/less\/style\.less}line{font-family:\0000379}}
 .left-bar .player:first-child {
   margin-top: 15px;
 }
-/* line 73, /opt/lampp/htdocs/gomets/public/less/style.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/opt\/lampp\/htdocs\/gomets\/public\/less\/style\.less}line{font-family:\0000373}}
+/* line 83, /opt/lampp/htdocs/gomets/public/less/style.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/opt\/lampp\/htdocs\/gomets\/public\/less\/style\.less}line{font-family:\0000383}}
+.left-bar .player.active {
+  background-color: #9a9a9a;
+}
+/* line 90, /opt/lampp/htdocs/gomets/public/less/style.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/opt\/lampp\/htdocs\/gomets\/public\/less\/style\.less}line{font-family:\0000390}}
 .face-container {
   width: 396px;
   height: 384px;
   background-image: url('../img/cara.jpg');
+  cursor: crosshair;
 }
-/* line 78, /opt/lampp/htdocs/gomets/public/less/style.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/opt\/lampp\/htdocs\/gomets\/public\/less\/style\.less}line{font-family:\0000378}}
+/* line 96, /opt/lampp/htdocs/gomets/public/less/style.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/opt\/lampp\/htdocs\/gomets\/public\/less\/style\.less}line{font-family:\0000396}}
 .face-container .gomet {
   position: absolute;
-}
-/* line 85, /opt/lampp/htdocs/gomets/public/less/style.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/opt\/lampp\/htdocs\/gomets\/public\/less\/style\.less}line{font-family:\0000385}}
-.player.active {
-  background-color: #9a9a9a;
 }
