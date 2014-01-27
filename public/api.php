@@ -86,6 +86,7 @@ function cerate_player()
     $player->gomets->green = array();
 
     $player->name = 'your_name';
+    $player->last = time();
 
     return $player;
 }
