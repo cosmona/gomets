@@ -36,7 +36,7 @@ app.controller('PlayerController', function ($scope, apiService, $location) {
         $.ionSound.play($scope.gometType);
 
         var offset = $('.face-container').offset();
-        var fix = 15;
+        var fix = 20;
         var x = event.clientX - offset.left - fix;
         var y = event.clientY - offset.top - fix;
         var gomet = {x: x, y: y};
