@@ -67,6 +67,13 @@ define('DATABASE', APP_FOLDER . '/db/players.json');
 
 function get_players()
 {
+    if (!is_readable(DATABASE)) {
+        if (!is_readable(APP_FOLDER . '/db/')) {
+            mkdir(APP_FOLDER . '/db/');
+        }
+
+        file_put_contents(DATABASE, '{}');
+    }
     return json_decode(file_get_contents(DATABASE));
 }
 
