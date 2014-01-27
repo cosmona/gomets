@@ -80,7 +80,7 @@ app.controller('PlayerController', function ($scope, apiService) {
 
     setInterval(function () {
         updateData();
-    }, 1500);
+    }, 1000);
 });
 
 app.factory('apiService', function ($http) {
